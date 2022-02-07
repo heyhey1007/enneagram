@@ -4,7 +4,7 @@
       <div class="bg pl-12 pb-12 pr-7 py-12 mt-10">
         <v-row align="center" justify="center">
           <v-row justify="center">
-            <v-col cols="12" class="pl-4 mt-12">
+            <v-col cols="12" class="ml-12 px-6 mt-12">
               <p>あなたに当てはまるものを選んでください！</p>
               <!-- <p>{{ no1 }}</p> -->
             </v-col>
@@ -64,7 +64,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 p {
   font-size: 2rem;
 }
@@ -73,7 +73,5 @@ p {
   min-height: 400px;
   background-image: url("/image/question_background.png");
   background-size: 100% 100%;
-}
-.question-container {
 }
 </style>
