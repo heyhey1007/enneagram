@@ -4,15 +4,16 @@
       <div class="bg ml-10 pl-12 pb-12 pr-7 py-12 mt-10">
         {{/* 動作確認のためのテストコード questionページからデータが受け渡せていることを確認 */}}
         <p>回答結果一覧</p>
-        <v-row v-for="(item, index) in answers" :key="index">
-          <v-col class="pl-6 col-6">
-            <p>{{ questions[index].question }}</p>
-          </v-col>
-          <v-col class="pl-6 col-6">
-            <p>{{ questions[index].options[item].option }}</p>
-          </v-col>
-        </v-row>
-        {{/* 動作確認のためのテストコード*/}}
+        <div v-if="questions.length">
+          <v-row v-for="(item, index) in answers" :key="index">
+            <v-col class="pl-6 col-6">
+              <p>{{ questions[index].question }}</p>
+            </v-col>
+            <v-col class="pl-6 col-6">
+              <p>{{ questions[index].options[item - 1].option }}</p>
+            </v-col>
+          </v-row>
+        </div>
       </div>
     </v-row>
   </v-container>
